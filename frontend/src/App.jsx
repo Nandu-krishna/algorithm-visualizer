@@ -409,7 +409,7 @@ const App = () => {
           </div>
           {status === 'error' && (
             <div className="status-error">
-              Cannot connect to backend at localhost:8080
+              Cannot connect to backend. Make sure the server is running.
             </div>
           )}
           {status === 'loading' && (
