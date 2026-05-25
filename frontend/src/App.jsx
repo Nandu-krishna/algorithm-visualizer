@@ -227,7 +227,7 @@ const App = () => {
     setStepIdx(-1);
     const { endpoint } = ALGORITHMS[algorithm];
     try {
-      const res = await axios.post(`http://localhost:8080${endpoint}`, {
+      const res = await axios.post(`https://algorithm-visualizer-api-production-c85e.up.railway.app${endpoint}`, {
         nodes,
         edges,
         startNode,
