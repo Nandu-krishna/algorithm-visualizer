@@ -126,8 +126,10 @@ const App = () => {
       const p1 = pos[e.source];
       const p2 = pos[e.destination];
       if (!p1 || !p2) return;
-      const mx = (p1.x + p2.x) / 2;
-      const my = (p1.y + p2.y) / 2;
+      const lx = p1.x + 0.35 * (p2.x - p1.x);
+      const ly = p1.y + 0.35 * (p2.y - p1.y);
+      const labelPadX = 16;
+      const labelPadY = 11;
       eg.append('line')
         .attr('x1', p1.x)
         .attr('y1', p1.y)
@@ -137,17 +139,17 @@ const App = () => {
         .attr('stroke-width', 2)
         .attr('marker-end', 'url(#arrow)');
       eg.append('rect')
-        .attr('x', mx - 14)
-        .attr('y', my - 10)
-        .attr('width', 28)
-        .attr('height', 18)
+        .attr('x', lx - labelPadX)
+        .attr('y', ly - labelPadY)
+        .attr('width', labelPadX * 2)
+        .attr('height', labelPadY * 2)
         .attr('rx', 6)
         .attr('fill', COLORS.edgeLabelBg)
         .attr('stroke', '#e2e8f0')
         .attr('stroke-width', 1);
       eg.append('text')
-        .attr('x', mx)
-        .attr('y', my)
+        .attr('x', lx)
+        .attr('y', ly)
         .attr('text-anchor', 'middle')
         .attr('dominant-baseline', 'central')
         .attr('fill', COLORS.edgeLabel)
