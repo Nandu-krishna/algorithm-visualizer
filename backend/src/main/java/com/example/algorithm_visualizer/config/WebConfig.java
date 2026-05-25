@@ -14,7 +14,7 @@ public class WebConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:5173", "https://algorithm-visualizer-git-main-nandu-krishnas-projects.vercel.app")
+                        .allowedOrigins("http://localhost:5173", "https://algorithm-visualizer-kohl-five.vercel.app")
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
