@@ -6,6 +6,9 @@
 ![D3.js](https://img.shields.io/badge/D3.js-orange)
 
 A full-stack web application that visually demonstrates how graph algorithms work step by step. Users can build custom graphs by adding nodes and edges, then run Dijkstra's or BFS algorithm and watch it execute one step at a time with color-coded node states and real-time distance updates.
+## 🔗 Live Demo
+👉 [Try it here](https://algorithm-visualizer-kohl-five.vercel.app/)
+
 
 ## Features
 
